@@ -5,10 +5,10 @@ import 'featured/speech_to_text/pages/speech_home_screen.dart';
 import 'featured/speech_to_text/pages/speech_list_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(SpeakToMe());
 }
 
-class MyApp extends StatelessWidget {
+class SpeakToMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
