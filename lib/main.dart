@@ -9,6 +9,7 @@ void main() {
 }
 
 class SpeakToMe extends StatelessWidget {
+  const SpeakToMe({super.key});
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

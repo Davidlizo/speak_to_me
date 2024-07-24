@@ -39,7 +39,7 @@ class SpeechHomeScreen extends StatelessWidget {
               child: SizedBox(
                 height: 230,
                 child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   child: Text(
                     'Recognized Word:  ${_controller.speech.value}',
                     style: GoogleFonts.lato(
