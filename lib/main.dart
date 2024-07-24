@@ -5,7 +5,7 @@ import 'featured/speech_to_text/pages/speech_home_screen.dart';
 import 'featured/speech_to_text/pages/speech_list_screen.dart';
 
 void main() {
-  runApp(SpeakToMe());
+  runApp(const SpeakToMe());
 }
 
 class SpeakToMe extends StatelessWidget {
