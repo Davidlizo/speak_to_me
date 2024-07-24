@@ -21,5 +21,6 @@ https://appetize.io/app/b_t5ufqm7bmcjtzczddspzgvgymq
 
 An example video 
 
-https://github.com/user-attachments/assets/c4d812f7-80d8-4f25-9d46-e08a37ae6dc6
+https://github.com/user-attachments/assets/b1b41797-0180-4c28-8e89-e28c6dde485a
+
 
