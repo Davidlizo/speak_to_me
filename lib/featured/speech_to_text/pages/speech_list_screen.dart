@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../controllers/speech_controller.dart';
 
 class SpeechListScreen extends StatelessWidget {
+  SpeechListScreen({super.key});
   final SpeechController _controller = Get.find<SpeechController>();
 
   @override
@@ -29,7 +30,7 @@ class SpeechListScreen extends StatelessWidget {
               autofocus: true,
               onChanged: (value) => _controller.filterWords(value),
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 hintText: 'Search',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),

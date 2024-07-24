@@ -58,22 +58,18 @@ class SpeechController extends GetxController {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String jsonString = jsonEncode(words);
     await prefs.setString('words', jsonString);
-    print("Words saved: $jsonString"); // Debugging log
   }
 
   Future<void> loadWords() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? jsonString = prefs.getString('words');
-    if (jsonString != null) {
-      List<dynamic> jsonResponse = jsonDecode(jsonString);
-      words.value = jsonResponse.map((e) => e as Map<String, dynamic>).toList();
-      filteredWords.value = List.from(words); // Initialize filteredWords with all words
-      if (words.isNotEmpty) {
-        wordId = words.last['id'] + 1; // Update wordId to the next available ID
-      }
-      print("Words loaded: $words"); // Debugging log
-    } else {
-      print("No words found in local storage"); // Debugging log
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  String? jsonString = prefs.getString('words');
+  if (jsonString != null) {
+    List<dynamic> jsonResponse = jsonDecode(jsonString);
+    words.value = jsonResponse.map((e) => e as Map<String, dynamic>).toList();
+    filteredWords.value = List.from(words); // Initialize filteredWords with all words
+    if (words.isNotEmpty) {
+      wordId = words.last['id'] + 1; // Update wordId to the next available ID
     }
   }
+}
 }

@@ -6,6 +6,7 @@ import '../controllers/speech_controller.dart';
 import 'speech_list_screen.dart';
 
 class SpeechHomeScreen extends StatelessWidget {
+  SpeechHomeScreen({super.key});
   final SpeechController _controller = Get.put(SpeechController());
 
   @override
@@ -22,7 +23,7 @@ class SpeechHomeScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.list),
+            icon: const Icon(Icons.list),
             onPressed: () {
               Get.to(() => SpeechListScreen());
             },
@@ -35,7 +36,7 @@ class SpeechHomeScreen extends StatelessWidget {
             () => Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 35.0),
-              child: Container(
+              child: SizedBox(
                 height: 230,
                 child: SingleChildScrollView(
                   physics: BouncingScrollPhysics(),
@@ -50,7 +51,7 @@ class SpeechHomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Center(
